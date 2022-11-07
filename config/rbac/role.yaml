@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - waigel.com
+  resources:
+  - gopassitems
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - waigel.com
+  resources:
+  - gopassitems/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - waigel.com
+  resources:
+  - gopassitems/status
+  verbs:
+  - get
+  - patch
+  - update

@@ -1,0 +1,12 @@
+apiVersion: waigel.com/v1alpha1
+kind: GopassItem
+metadata:
+  labels:
+    app.kubernetes.io/name: gopassitem
+    app.kubernetes.io/instance: gopassitem-sample
+    app.kubernetes.io/part-of: gopass-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: gopass-operator
+  name: gopassitem-sample
+spec:
+  itemPath: path/to/secret

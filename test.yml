@@ -1,0 +1,6 @@
+apiVersion: waigel.com/v1alpha1
+kind: GopassItem
+metadata:
+  name: test
+spec:
+  itemPath: klex/test-gopass

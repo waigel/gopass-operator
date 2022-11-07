@@ -1,0 +1,27 @@
+# permissions for end users to view gopassitems.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: gopassitem-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: gopass-operator
+    app.kubernetes.io/part-of: gopass-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: gopassitem-viewer-role
+rules:
+- apiGroups:
+  - waigel.com
+  resources:
+  - gopassitems
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - waigel.com
+  resources:
+  - gopassitems/status
+  verbs:
+  - get
